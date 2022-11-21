@@ -2,6 +2,7 @@ package models
 
 import (
 	"fmt"
+	"net/http"
 
 	"github.com/gin-gonic/gin"
 )
@@ -15,4 +16,9 @@ type User struct {
 func GetUsers(c *gin.Context) {
 
 	fmt.Println("GetUsers")
+
+	c.JSON(http.StatusOK, gin.H{
+		"code": 200,
+		"msg":  "Hello World",
+	})
 }

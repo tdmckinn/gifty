@@ -1,6 +1,6 @@
 import React from 'react';
 
-export function Header() {
+export default function Header() {
   return (
     <header className="bg-indigo-600 pb-24">
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">

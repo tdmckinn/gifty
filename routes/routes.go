@@ -4,17 +4,22 @@ import (
 	"gifty/routes/api"
 	"gifty/routes/middle"
 
+	"github.com/gin-contrib/cors"
 	"github.com/gin-contrib/static"
 	"github.com/gin-gonic/gin"
 	"go.uber.org/zap"
 )
 
 func Setup(mode string) *gin.Engine {
-	router := gin.New()
+	router := gin.Default()
 
 	// Serve frontend static files
 	// router.StaticFS("/static", http.Dir("./static"))
 	router.Use(static.Serve("/", static.LocalFile("./static/dist", true)))
+
+	config := cors.DefaultConfig()
+	config.AllowAllOrigins = true
+	router.Use(cors.New(config))
 
 	setEngineMode(mode)
 

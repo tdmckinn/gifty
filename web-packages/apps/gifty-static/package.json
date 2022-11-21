@@ -5,13 +5,19 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host",
-    "build":"rm -rf ../../../static/dist && tsc && vite build",
+    "build": "rm -rf ../../../static/dist && tsc && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
     "@tailwindcss/forms": "^0.5.3",
+    "gifty-api": "workspace:^1.0.0",
+    "gifty-components": "workspace:^1.0.0",
+    "localforage": "^1.10.0",
+    "match-sorter": "^6.3.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.4.3",
+    "sort-by": "^1.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.24",

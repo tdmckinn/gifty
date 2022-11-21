@@ -14,6 +14,7 @@ import (
 
 func RegisterUserRoutes(r *gin.Engine) {
 	// import models here
+
 	user := r.Group("/api/v1/users")
 	{
 		user.GET("", models.GetUsers)
