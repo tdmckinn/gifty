@@ -6,23 +6,20 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-// r.GET("/api/v1/users", user.List)
-// r.GET("/api/v1/users/:id", user.Get)
-// r.POST("/api/v1/users", user.Create)
-// r.PUT("/api/v1/users/:id", user.Update)
-// r.DELETE("/api/v1/users/:id", user.Delete)
-
 func RegisterUserRoutes(r *gin.Engine) {
 	// import models here
 
-	user := r.Group("/api/v1/users")
+	user := r.Group("/api/v1")
 	{
-		user.GET("", models.GetUsers)
+		user.GET("/users", models.GetUsers)
+		user.GET("/user/:id", models.GetUser)
+		user.POST("/user", models.AddUser)
 		// 	user.GET(":id", user.Get)
 		// 	user.POST("", user.Create)
 		// 	user.PUT(":id", user.Update)
 		// 	user.DELETE(":id", user.Delete)
 		// }
 	}
+
 	return
 }
