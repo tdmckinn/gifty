@@ -26,6 +26,7 @@ export default function handleRequest(
         [callbackName]: () => {
           const body = new PassThrough();
 
+          console.log('Authorization', request.headers.get("Authorization"));
           responseHeaders.set("Content-Type", "text/html");
 
           resolve(

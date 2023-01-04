@@ -28,11 +28,6 @@ func Setup(mode string) *gin.Engine {
 		middle.RecoveryWithZap(zap.L(), true),
 	)
 
-	// register routes here
-	// router.GET("/", func(c *gin.Context) {
-	// 	c.String(http.StatusOK, http.StatusText(http.StatusOK))
-	// })
-
 	api.RegisterUserRoutes(router)
 
 	return router

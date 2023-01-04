@@ -30,10 +30,10 @@ export async function loader({ request }: LoaderArgs) {
 
 export default function App() {
   return (
-    <html lang="en" className="h-full  bg-gray-50">
+    <html lang="en" className="h-full bg-gray-50">
       <head>
         <Meta />
-        <Links />
+        <script src="https://cdn.tailwindcss.com"></script>
       </head>
       <body className="h-full">
         <Outlet />

@@ -61,30 +61,21 @@ export default function Login({
       <body class="h-full">
       ```
     */}
-      <div className="flex min-h-full flex-col justify-center py-12 sm:px-6 lg:px-8">
+      <div className="flex flex-col justify-center min-h-full py-12 sm:px-6 lg:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-md">
           <img
-            className="mx-auto h-12 w-auto"
-            src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+            className="w-auto h-12 mx-auto"
+            src="https://tailwindui.com/img/logos/mark.svg?color=emerald&shade=600"
             alt="Your Company"
           />
-          <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">
-            Sign in to your account
+          <h2 className="mt-6 text-3xl font-bold tracking-tight text-center text-gray-900">
+            Sign in to your <span className="font-bold text-emerald-800"> Gifty</span> account
           </h2>
-          <p className="mt-2 text-center text-sm text-gray-600">
-            Or{" "}
-            <a
-              href="#"
-              className="font-medium text-indigo-600 hover:text-indigo-500"
-            >
-              start your 14-day free trial
-            </a>
-          </p>
         </div>
 
         <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
-          <div className="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
-            <div className="mx-auto w-full max-w-md px-8">
+          <div className="px-4 py-8 bg-white shadow sm:rounded-lg sm:px-10">
+            <div className="w-full max-w-md px-8 mx-auto">
               {isMagicLinkSent ? (
                 <div>
                   Magic link sent check your email! You can close this tab at
@@ -110,7 +101,7 @@ export default function Login({
                         onChange={(e) => setEmail(e.target.value)}
                         value={email}
                         aria-describedby="email-error"
-                        className="w-full rounded border border-gray-500 px-2 py-1 text-lg"
+                        className="w-full px-2 py-1 text-lg border border-gray-500 rounded"
                       />
                     </div>
                   </div>
@@ -121,7 +112,7 @@ export default function Login({
                       magicLinkAuthentication(email);
                     }}
                     disabled={loading}
-                    className="w-full rounded bg-blue-500  py-2 px-4 text-white hover:bg-blue-600 focus:bg-blue-400"
+                    className="w-full px-4 py-2 text-white rounded bg-emerald-500 hover:bg-emerald-600 focus:bg-emerald-400"
                   >
                     {loading ? (
                       <span>Loading</span>
@@ -135,16 +126,16 @@ export default function Login({
                         id="remember"
                         name="remember"
                         type="checkbox"
-                        className="h-4 w-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                        className="w-4 h-4 border-gray-300 rounded text-emerald-600 focus:ring-emerald-500"
                       />
                       <label
                         htmlFor="remember"
-                        className="ml-2 block text-sm text-gray-900"
+                        className="block ml-2 text-sm text-gray-900"
                       >
                         Remember me
                       </label>
                     </div>
-                    <div className="text-center text-sm text-gray-500">
+                    <div className="text-sm text-center text-gray-500">
                       Don't have an account?{" "}
                     </div>
                   </div>
